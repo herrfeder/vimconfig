@@ -184,5 +184,79 @@ map <C-n> <nop>
 command Vash :set nolist | 10split | ConqueTerm bash
 command Vython :set nolist | 10split | ConqueTerm python
 
+" templates for creating documentation
 
-set t_ut=
+command! Btm call BeginTermM()
+function! BeginTermM()
+           normal! i~~~ {.text breaklines=true bgcolor=met fontsize=\footnotesize framesep=6mm frame=single rulecolor=att}
+           normal! o
+           normal! o~~~
+      endfunction
+
+
+command! Btl call BeginTermL()
+function! BeginTermL()
+           normal! i~~~ {.text breaklines=true bgcolor=lin fontsize=\footnotesize framesep=6mm frame=single rulecolor=att}
+           normal! o
+           normal! o~~~
+      endfunction
+
+command! Btw call BeginTermW()
+function! BeginTermW()
+           normal! i~~~ {.text breaklines=true bgcolor=win fontsize=\footnotesize framesep=6mm frame=single rulecolor=att}
+           normal! o
+           normal! o~~~
+      endfunction
+
+command! Bvl call BeginVicL()
+function! BeginVicL()
+           normal! i~~~ {.text breaklines=true bgcolor=lin fontsize=\footnotesize framesep=6mm frame=single rulecolor=vic}
+           normal! o
+           normal! o~~~
+      endfunction
+
+command! Bvw call BeginVicW()
+function! BeginVicW()
+           normal! i~~~ {.text breaklines=true bgcolor=win fontsize=\footnotesize framesep=6mm frame=single rulecolor=vic}
+           normal! o
+           normal! o~~~
+      endfunction
+
+command! Bvb call BeginBash()
+function! BeginBash()
+           normal! i~~~ {.bash breaklines=true bgcolor=bg fontsize=\footnotesize}
+           normal! o
+           normal! o~~~
+      endfunction
+
+
+
+
+command! Tem call InsertTemplate()
+function! InsertTemplate()
+           normal! i##
+           normal! o|                                       |
+           normal! o|-----------------------------------+---|
+           normal! o| OS                                |   |
+           normal! o| Network Name                      |   |
+           normal! o| Access Exploit                    |   |
+           normal! o| Local Privilege Escalation        |   |
+           normal! o
+           normal! o### Methodologies
+           normal! o
+           normal! o### Information Gathering
+           normal! o
+           normal! o### Service Enumeration
+           normal! o
+           normal! o### Getting Access
+           normal! o
+           normal! o### Internal Information Gathering
+           normal! o
+           normal! o### Local Privilege Escalation
+           normal! o
+           normal! o### Post Exploitation
+           normal! o
+      endfunction
+
+
+

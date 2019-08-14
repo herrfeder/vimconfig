@@ -28,8 +28,6 @@ nnoremap <C-H> <C-W><C-H>
 
 set t_Co=256
 
-
-
 " Enable folding
 set foldmethod=indent
 set foldlevel=99
@@ -61,10 +59,10 @@ au BufNewFile,BufRead *.js, *.html, *.css
 "Plugin 'vim-scripts/indentpython.vim'
 
 " Syntax Checking/Highlighting
-"Plugin 'scrooloose/syntastic'
-"Plugin 'nvie/vim-flake8'
+Plugin 'scrooloose/syntastic'
+Plugin 'nvie/vim-flake8'
 
-"let python_highlight_all=1
+let python_highlight_all=1
 syntax on
 
 " Auto completion
@@ -136,7 +134,7 @@ set clipboard=unnamed
 
 
 " turn hybrid line numbers on
-set number relativenumber
+" set number relativenumber
 " :set nu rnu
 "
 " " turn hybrid line numbers off
@@ -147,8 +145,12 @@ set number relativenumber
 " :set number! relativenumber!
 " :set nu! rnu!
 
-set cursorline!
-set cursorcolumn!
+set cursorline
+set cursorcolumn
+
+" doesnt jump back to first line after change buffer
+set nosol
+
 
 "highlight CursorLine ctermbg=Black ctermfg=NONE guibg=NONE guifg=NONE
 " black seems to not work in vim with tmux

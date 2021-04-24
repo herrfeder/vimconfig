@@ -81,6 +81,9 @@ syntax on
 " Auto completion
 Plugin 'valloric/youcompleteme'
 
+" Python autocompletion
+"Plugin 'davidhalter/jedi-vim'
+
 
 " Color Schemes
 Plugin 'jnurmine/Zenburn'

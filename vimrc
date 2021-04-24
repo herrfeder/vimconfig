@@ -52,6 +52,19 @@ au BufNewFile,BufRead *.js, *.html, *.css
 	\ set softtabstop=2 |
 	\ set shiftwidth=2 
 
+
+" #### YAML PLUGIN
+Plugin 'stephpy/vim-yaml'
+
+" add yaml stuffs
+au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml foldmethod=indent
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+" #### VIM NOTES
+
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-notes'
+
 " Flagging unneccesary whitespaces
 "au BufRead, BufNewFile *.py, *.pyw, *.c, *.h match BadWhitespace /\s\+$/
 
@@ -166,7 +179,6 @@ let g:rainbow_active = 1
 Bundle 'rosenfeld/conque-term'
 
 
-
 " automatically add delimiter for example for open bracket
 Plugin 'Raimondi/delimitMate'
 
@@ -185,6 +197,9 @@ map <C-n> <nop>
 
 command Vash :set nolist | 10split | ConqueTerm bash
 command Vython :set nolist | 10split | ConqueTerm python
+
+
+
 
 " templates for creating documentation
 

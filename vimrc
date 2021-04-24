@@ -124,13 +124,13 @@ Plugin 'majutsushi/tagbar'
 nnoremap <F3> :TagbarToggle<CR>
 
 
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-let g:airline#extensions#tabline#enabled = 1
+"Plugin 'vim-airline/vim-airline'
+"Plugin 'vim-airline/vim-airline-themes'
+"let g:airline#extensions#tabline#enabled = 1
 
-let g:airline#extensions#syntastic#enabled = 1
-set laststatus=2
-let g:airline_extensions = ['branch', 'tabline']
+"let g:airline#extensions#syntastic#enabled = 1
+"set laststatus=2
+"let g:airline_extensions = ['branch', 'tabline']
 
 
 nnoremap <Tab> :bnext<CR>
